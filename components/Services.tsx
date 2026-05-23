@@ -1,5 +1,23 @@
 const services = [
   {
+    title: 'UX/UI Design',
+    description: 'ออกแบบประสบการณ์ผู้ใช้และส่วนติดต่อที่สวยงาม ใช้งานง่าย และตอบโจทย์ผู้ใช้',
+    icon: '✨',
+    features: ['User Research', 'Wireframing', 'Prototyping', 'Design System']
+  },
+  {
+    title: 'Web Development',
+    description: 'พัฒนาเว็บแอปพลิเคชันด้วยเทคโนโลยีทันสมัย รองรับการขยายตัวของธุรกิจ',
+    icon: '💻',
+    features: ['Modern Stack', 'Scalable', 'Secure', 'Maintainable']
+  },
+  {
+    title: 'Custom Solutions',
+    description: 'พัฒนาระบบตามความต้องการเฉพาะของธุรกิจ ตอบโจทย์ทุกความต้องการ',
+    icon: '🔧',
+    features: ['Tailored Solutions', 'Integration', 'Support', 'Training']
+  },
+  {
     title: 'Landing Page',
     description: 'ออกแบบและพัฒนาหน้าเว็บที่ดึงดูดลูกค้า เพิ่มยอดขาย และสร้างความน่าเชื่อถือให้แบรนด์',
     icon: '🎨',
@@ -17,24 +35,7 @@ const services = [
     icon: '🛒',
     features: ['Payment Gateway', 'Inventory Management', 'Order Tracking', 'Mobile Friendly']
   },
-  {
-    title: 'UX/UI Design',
-    description: 'ออกแบบประสบการณ์ผู้ใช้และส่วนติดต่อที่สวยงาม ใช้งานง่าย และตอบโจทย์ผู้ใช้',
-    icon: '✨',
-    features: ['User Research', 'Wireframing', 'Prototyping', 'Design System']
-  },
-  {
-    title: 'Web Development',
-    description: 'พัฒนาเว็บแอปพลิเคชันด้วยเทคโนโลยีทันสมัย รองรับการขยายตัวของธุรกิจ',
-    icon: '💻',
-    features: ['Modern Stack', 'Scalable', 'Secure', 'Maintainable']
-  },
-  {
-    title: 'Custom Solutions',
-    description: 'พัฒนาระบบตามความต้องการเฉพาะของธุรกิจ ตอบโจทย์ทุกความต้องการ',
-    icon: '🔧',
-    features: ['Tailored Solutions', 'Integration', 'Support', 'Training']
-  }
+  
 ];
 
 export default function Services() {

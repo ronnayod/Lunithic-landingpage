@@ -66,7 +66,7 @@ export default function Portfolio() {
             if (project.link) {
               return (
                 <a
-                  key={index}
+                  key={project.title}
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -78,7 +78,7 @@ export default function Portfolio() {
             }
 
             return (
-              <div key={index} className={className.replace(" cursor-pointer", "")}>
+              <div key={project.title} className={className.replace(" cursor-pointer", "")}>
                 {cardContent}
               </div>
             );

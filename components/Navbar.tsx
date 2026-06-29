@@ -35,6 +35,8 @@ export default function Navbar() {
 
           <div className="md:hidden">
             <button
+              type="button"
+              aria-label="Toggle menu"
               onClick={() => setIsOpen(!isOpen)}
               className="text-[#5C3A54] hover:text-[#7A4E6F]"
             >

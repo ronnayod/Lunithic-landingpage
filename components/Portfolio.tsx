@@ -4,28 +4,26 @@ const projects = [
     category: 'E-Commerce',
     description: 'ระบบร้านค้าออนไลน์ขนาดใหญ่ที่รองรับสินค้ากว่า 10,000 รายการ',
     image: '🛍️',
-    tags: ['Next.js', 'Stripe', 'PostgreSQL']
+    link: 'https://6a4118e252fddc88a192423b--reliable-sable-25d034.netlify.app/'
+  },
+  {
+    title: 'Web Management',
+    category: 'Management',
+    description: 'ระบบจัดการเว็บไซต์และข้อมูลหลังบ้านสำหรับองค์กร',
+    image: '🖥️',
+    link: 'https://lunithicmanagement.vercel.app/'
   },
   {
     title: 'CRM Dashboard',
     category: 'CRM System',
     description: 'ระบบบริหารจัดการลูกค้าสำหรับบริษัทขนาดกลาง',
-    image: '📈',
-    tags: ['React', 'Node.js', 'MongoDB']
-  },
-  {
-    title: 'Corporate Website',
-    category: 'Landing Page',
-    description: 'เว็บไซต์องค์กรที่ทันสมัยและตอบสนองบนทุกอุปกรณ์',
-    image: '🏢',
-    tags: ['Next.js', 'Tailwind', 'SEO']
+    image: '📈'
   },
   {
     title: 'Booking System',
     category: 'Custom Solution',
     description: 'ระบบจองคิวออนไลน์สำหรับธุรกิจบริการ',
-    image: '📅',
-    tags: ['React', 'Firebase', 'Payment']
+    image: '📅'
   }
 ];
 
@@ -43,37 +41,48 @@ export default function Portfolio() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="group bg-[#EAE8E1]/10 backdrop-blur-sm rounded-3xl overflow-hidden hover:bg-[#EAE8E1]/20 transition-all duration-300 border border-[#EAE8E1]/20 hover:scale-105 transform"
-            >
-              <div className="bg-gradient-to-br from-[#7A4E6F] to-[#5C3A54] h-48 flex items-center justify-center text-8xl group-hover:scale-110 transition-transform">
-                {project.image}
-              </div>
-              <div className="p-6">
-                <div className="text-sm text-[#D4A5A5] font-semibold mb-2 uppercase tracking-wider">
-                  {project.category}
+          {projects.map((project, index) => {
+            const cardContent = (
+              <>
+                <div className="bg-gradient-to-br from-[#7A4E6F] to-[#5C3A54] h-48 flex items-center justify-center text-8xl group-hover:scale-110 transition-transform">
+                  {project.image}
                 </div>
-                <h3 className="text-2xl font-bold text-[#EAE8E1] mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-[#EAE8E1]/70 mb-4">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, idx) => (
-                    <span
-                      key={idx}
-                      className="bg-[#EAE8E1]/20 text-[#EAE8E1] px-3 py-1 rounded-full text-sm border border-[#EAE8E1]/30"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                <div className="p-6">
+                  <div className="text-sm text-[#D4A5A5] font-semibold mb-2 uppercase tracking-wider">
+                    {project.category}
+                  </div>
+                  <h3 className="text-2xl font-bold text-[#EAE8E1] mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-[#EAE8E1]/70 mb-4">
+                    {project.description}
+                  </p>
                 </div>
+              </>
+            );
+
+            const className = "group bg-[#EAE8E1]/10 backdrop-blur-sm rounded-3xl overflow-hidden hover:bg-[#EAE8E1]/20 transition-all duration-300 border border-[#EAE8E1]/20 hover:scale-105 transform block cursor-pointer";
+
+            if (project.link) {
+              return (
+                <a
+                  key={index}
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={className}
+                >
+                  {cardContent}
+                </a>
+              );
+            }
+
+            return (
+              <div key={index} className={className.replace(" cursor-pointer", "")}>
+                {cardContent}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

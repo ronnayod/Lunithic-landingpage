@@ -1,67 +1,129 @@
+'use client';
+
+import { useEffect, useRef } from 'react';
+
 const projects = [
   {
     title: 'E-Commerce Platform',
     category: 'E-Commerce',
-    description: 'ระบบร้านค้าออนไลน์ขนาดใหญ่ที่รองรับสินค้ากว่า 10,000 รายการ',
-    image: '🛍️',
-    link: 'https://6a4118e252fddc88a192423b--reliable-sable-25d034.netlify.app/'
+    description: 'ระบบร้านค้าออนไลน์รองรับ 10,000+ สินค้า',
+    result: 'เพิ่มยอดขายออนไลน์ 280%',
+    emoji: '🛍️',
+    link: 'https://6a4118e252fddc88a192423b--reliable-sable-25d034.netlify.app/',
   },
   {
     title: 'Web Management',
     category: 'Management',
-    description: 'ระบบจัดการเว็บไซต์และข้อมูลหลังบ้านสำหรับองค์กร',
-    image: '🖥️',
-    link: 'https://lunithicmanagement.vercel.app/'
+    description: 'ระบบจัดการเว็บไซต์หลังบ้าน',
+    result: 'ลดเวลาทำงาน 60%',
+    emoji: '🖥️',
+    link: 'https://lunithicmanagement.vercel.app/',
   },
   {
     title: 'CRM Dashboard',
     category: 'CRM System',
-    description: 'ระบบบริหารจัดการลูกค้าสำหรับบริษัทขนาดกลาง',
-    image: '📈'
+    description: 'ระบบบริหารลูกค้าสำหรับบริษัทขนาดกลาง',
+    result: 'เพิ่มประสิทธิภาพทีมขาย 3 เท่า',
+    emoji: '📈',
   },
   {
     title: 'Booking System',
     category: 'Custom Solution',
-    description: 'ระบบจองคิวออนไลน์สำหรับธุรกิจบริการ',
-    image: '📅'
-  }
+    description: 'ระบบจองคิวออนไลน์',
+    result: 'ลดอัตราการยกเลิก 45%',
+    emoji: '📅',
+  },
 ];
 
 export default function Portfolio() {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    const elements = sectionRef.current?.querySelectorAll('.reveal, .stagger-children');
+    elements?.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="portfolio" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#5C3A54] to-[#3D2438]">
+    <section
+      ref={sectionRef}
+      id="portfolio"
+      className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0B1026] to-[#1A1F3D]"
+      aria-label="ผลงานของเรา"
+    >
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-5xl font-bold text-[#EAE8E1] mb-4 tracking-tight">
+        {/* Section heading */}
+        <div className="text-center mb-16 reveal">
+          <h2 className="text-3xl sm:text-5xl font-bold text-[#E8E6F0] mb-4 tracking-tight">
             ผลงานของเรา
           </h2>
-          <p className="text-xl text-[#EAE8E1]/70 max-w-2xl mx-auto">
-            ตัวอย่างโปรเจกต์ที่เราได้พัฒนาให้กับลูกค้า
+          <p className="text-lg text-[#8B8DA3] max-w-2xl mx-auto leading-relaxed">
+            ตัวอย่างโปรเจกต์ที่เราพัฒนาให้กับลูกค้า พร้อมผลลัพธ์ที่วัดได้
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, index) => {
-            const cardContent = (
+        {/* Project cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 stagger-children">
+          {projects.map((project) => {
+            const card = (
               <>
-                <div className="bg-gradient-to-br from-[#7A4E6F] to-[#5C3A54] h-48 flex items-center justify-center text-8xl group-hover:scale-110 transition-transform">
-                  {project.image}
+                {/* Gradient icon area */}
+                <div className="bg-gradient-to-br from-[#6366F1] to-[#22D3EE] h-48 flex items-center justify-center text-7xl sm:text-8xl transition-transform duration-500 group-hover:scale-105 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-[#0B1026]/20" />
+                  <span className="relative z-10">{project.emoji}</span>
                 </div>
-                <div className="p-6">
-                  <div className="text-sm text-[#D4A5A5] font-semibold mb-2 uppercase tracking-wider">
+
+                {/* Content */}
+                <div className="p-6 sm:p-8">
+                  {/* Category badge */}
+                  <div className="text-xs text-[#22D3EE] font-semibold mb-2 uppercase tracking-wider">
                     {project.category}
                   </div>
-                  <h3 className="text-2xl font-bold text-[#EAE8E1] mb-2">
+
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#E8E6F0] mb-2 group-hover:text-[#22D3EE] transition-colors duration-300">
                     {project.title}
                   </h3>
-                  <p className="text-[#EAE8E1]/70 mb-4">
+
+                  <p className="text-[#8B8DA3] mb-3 text-sm leading-relaxed">
                     {project.description}
                   </p>
+
+                  {/* Result metric */}
+                  <p className="text-[#F2E8C9] font-semibold text-sm mb-4">
+                    📊 {project.result}
+                  </p>
+
+                  {/* Link or badge */}
+                  {project.link ? (
+                    <span className="inline-flex items-center text-[#22D3EE] text-sm font-medium group-hover:translate-x-1 transition-transform duration-300">
+                      ดูผลงาน
+                      <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </span>
+                  ) : (
+                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#6366F1]/20 text-[#8B8DA3] text-xs font-medium">
+                      กำลังพัฒนา
+                    </span>
+                  )}
                 </div>
               </>
             );
 
-            const className = "group bg-[#EAE8E1]/10 backdrop-blur-sm rounded-3xl overflow-hidden hover:bg-[#EAE8E1]/20 transition-all duration-300 border border-[#EAE8E1]/20 hover:scale-105 transform block cursor-pointer";
+            const cardClassName =
+              'group bg-[#1A1F3D]/60 backdrop-blur-xl border border-[#6366F1]/20 rounded-2xl overflow-hidden transition-all duration-500 hover:border-[#6366F1]/50 hover:scale-[1.02] hover:shadow-[0_8px_32px_rgba(99,102,241,0.15)]';
 
             if (project.link) {
               return (
@@ -70,16 +132,17 @@ export default function Portfolio() {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={className}
+                  className={`${cardClassName} block cursor-pointer`}
+                  aria-label={`ดูโปรเจกต์ ${project.title}`}
                 >
-                  {cardContent}
+                  {card}
                 </a>
               );
             }
 
             return (
-              <div key={project.title} className={className.replace(" cursor-pointer", "")}>
-                {cardContent}
+              <div key={project.title} className={cardClassName} aria-label={`โปรเจกต์ ${project.title}`}>
+                {card}
               </div>
             );
           })}

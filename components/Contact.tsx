@@ -40,79 +40,7 @@ export default function Contact() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Form */}
-          <div>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Name */}
-              <div>
-                <label htmlFor="contact-name" className="block text-sm font-semibold text-[#E8E6F0] mb-2">
-                  ชื่อ
-                </label>
-                <input
-                  id="contact-name"
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  placeholder="กรอกชื่อของคุณ"
-                  className="w-full px-4 py-3.5 rounded-xl border border-[#6366F1]/20 bg-[#1A1F3D]/60 text-[#E8E6F0] placeholder-[#8B8DA3]/50 focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/30 focus:outline-none transition-all duration-300 backdrop-blur-xl"
-                  aria-label="ชื่อของคุณ"
-                />
-              </div>
-
-              {/* Email */}
-              <div>
-                <label htmlFor="contact-email" className="block text-sm font-semibold text-[#E8E6F0] mb-2">
-                  อีเมล
-                </label>
-                <input
-                  id="contact-email"
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  placeholder="email@example.com"
-                  className="w-full px-4 py-3.5 rounded-xl border border-[#6366F1]/20 bg-[#1A1F3D]/60 text-[#E8E6F0] placeholder-[#8B8DA3]/50 focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/30 focus:outline-none transition-all duration-300 backdrop-blur-xl"
-                  aria-label="อีเมลของคุณ"
-                />
-              </div>
-
-              {/* Service */}
-              <div>
-                <label htmlFor="contact-service" className="block text-sm font-semibold text-[#E8E6F0] mb-2">
-                  บริการที่สนใจ
-                </label>
-                <select
-                  id="contact-service"
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3.5 rounded-xl border border-[#6366F1]/20 bg-[#1A1F3D]/60 text-[#E8E6F0] focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/30 focus:outline-none transition-all duration-300 backdrop-blur-xl appearance-none"
-                  aria-label="เลือกบริการที่สนใจ"
-                >
-                  <option value="" className="bg-[#1A1F3D]">เลือกบริการ</option>
-                  <option value="landing" className="bg-[#1A1F3D]">Landing Page</option>
-                  <option value="crm" className="bg-[#1A1F3D]">CRM System</option>
-                  <option value="ecommerce" className="bg-[#1A1F3D]">E-Commerce</option>
-                  <option value="uxui" className="bg-[#1A1F3D]">UX/UI Design</option>
-                  <option value="development" className="bg-[#1A1F3D]">Web Development</option>
-                  <option value="custom" className="bg-[#1A1F3D]">Custom Solution</option>
-                </select>
-              </div>
-
-              {/* Submit */}
-              <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-[#6366F1] to-[#22D3EE] text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:shadow-[0_0_32px_rgba(99,102,241,0.5)] hover:scale-105"
-                aria-label="จองคิวปรึกษาฟรี"
-              >
-                จองคิวปรึกษาฟรี
-              </button>
-            </form>
-          </div>
+   
 
           {/* Contact info */}
           <div className="space-y-6">
@@ -145,7 +73,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="font-semibold text-[#E8E6F0] text-sm">โทรศัพท์</div>
-                    <div className="text-[#8B8DA3]">09-8285-6421</div>
+                    <div className="text-[#8B8DA3]">09-8285-6421, 09-2658-4645</div>
                   </div>
                 </div>
 
@@ -159,7 +87,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="font-semibold text-[#E8E6F0] text-sm">ที่อยู่</div>
-                    <div className="text-[#8B8DA3]">กรุงเทพมหานคร ประเทศไทย</div>
+                    <div className="text-[#8B8DA3]">ปราจีนบุรี ประเทศไทย</div>
                   </div>
                 </div>
 
@@ -172,12 +100,15 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="font-semibold text-[#E8E6F0] text-sm">เวลาทำการ</div>
-                    <div className="text-[#8B8DA3]">จันทร์-ศุกร์ 9:00-18:00</div>
+                    <div className="text-[#8B8DA3]">จันทร์-ศุกร์ 12:00-20:00</div>
+                    <div className="text-[#8B8DA3]">เสาร์-อาทิตย์ 14:00-22:00</div>
                   </div>
                 </div>
               </div>
             </div>
-
+          </div>
+          {/* Contact form */}
+          <div className="space-y-6">
             {/* Social links */}
             <div className="bg-[#1A1F3D]/60 backdrop-blur-xl border border-[#6366F1]/20 rounded-2xl p-8">
               <h3 className="text-lg font-bold text-[#E8E6F0] mb-4">
@@ -185,14 +116,13 @@ export default function Contact() {
               </h3>
               <div className="flex gap-3">
                 {[
-                  { label: 'Facebook', letter: 'f' },
-                  { label: 'Twitter', letter: 't' },
-                  { label: 'Instagram', letter: 'ig' },
-                  { label: 'LinkedIn', letter: 'in' },
+                  { label: 'Facebook', letter: 'f', href: 'https://www.facebook.com/profile.php?id=61578130177732&locale=th_TH' },
                 ].map((social) => (
                   <a
                     key={social.label}
-                    href="#"
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label={social.label}
                     className="w-11 h-11 bg-[#1A1F3D] border border-[#6366F1]/20 rounded-xl flex items-center justify-center text-[#8B8DA3] font-bold text-sm hover:bg-[#6366F1] hover:text-white hover:border-[#6366F1] transition-all duration-300"
                   >

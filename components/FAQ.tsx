@@ -16,12 +16,12 @@ const faqs = [
   {
     question: 'Lunithic ใช้เทคโนโลยีอะไรในการพัฒนา?',
     answer:
-      'เราใช้เทคโนโลยีทันสมัยที่เป็นมาตรฐานอุตสาหกรรม ได้แก่ Next.js, React, TypeScript สำหรับ Frontend และ Node.js, MongoDB, PostgreSQL สำหรับ Backend รวมถึง Figma สำหรับการออกแบบ UX/UI ทำให้เว็บไซต์โหลดเร็ว ปลอดภัย และรองรับการขยายตัวในอนาคต',
+      'เราใช้เทคโนโลยีทันสมัยที่เป็นมาตรฐานอุตสาหกรรม ได้แก่ Nuxt.js, Vue, Next.js, React, TypeScript สำหรับ Frontend และ Node.js, MongoDB, สำหรับ Backend รวมถึง Figma สำหรับการออกแบบ UX/UI ทำให้เว็บไซต์โหลดเร็ว ปลอดภัย และรองรับการขยายตัวในอนาคต',
   },
   {
     question: 'รวม SEO ในการทำเว็บไซต์ด้วยไหม?',
     answer:
-      'ทุกเว็บไซต์ที่เราพัฒนาจะรวม SEO พื้นฐานให้ทุกโปรเจกต์ ได้แก่ การตั้งค่า meta tags, sitemap, robots.txt, structured data (JSON-LD), page speed optimization และ mobile-first responsive design สำหรับ SEO ขั้นสูง เช่น content strategy และ link building สามารถเลือกเพิ่มเติมได้',
+      'ทุกเว็บไซต์ที่เราพัฒนาจะรวม SEO พื้นฐานให้ทุกโปรเจกต์ ได้แก่ การตั้งค่า meta tags, sitemap,  structured data (JSON-LD), page speed optimization และ mobile-first responsive design สำหรับ SEO ขั้นสูง เช่น content strategy และ link building สามารถเลือกเพิ่มเติมได้',
   },
   {
     question: 'มีบริการดูแลเว็บไซต์หลังเสร็จไหม?',
@@ -63,14 +63,23 @@ function AccordionItem({
           {faq.question}
         </h3>
         <span
-          className={`flex-shrink-0 w-8 h-8 rounded-full border border-[#6366F1]/30 flex items-center justify-center text-[#6366F1] text-lg font-light transition-all duration-300 ${
+          className={`flex-shrink-0 w-8 h-8 rounded-full border border-[#6366F1]/30 flex items-center justify-center transition-all duration-300 ${
             isOpen
-              ? 'bg-[#6366F1] text-white rotate-45 border-transparent'
+              ? 'bg-[#6366F1] border-transparent'
               : 'group-hover:border-[#6366F1]/60'
           }`}
           aria-hidden="true"
         >
-          +
+          <svg
+            className={`w-3.5 h-3.5 transition-transform duration-300 ${
+              isOpen ? 'rotate-45 text-white' : 'text-[#6366F1]'
+            }`}
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M12 5v14m7-7H5" />
+          </svg>
         </span>
       </button>
 

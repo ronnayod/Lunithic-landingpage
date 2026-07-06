@@ -10,8 +10,8 @@ const statsData = [
 ];
 
 const techStack = [
-  'Next.js', 'React', 'TypeScript', 'Node.js', 'MongoDB',
-  'PostgreSQL', 'Tailwind CSS', 'Figma', 'Vercel', 'Git',
+  'Nuxt.js', 'Vue', 'Next.js', 'React', 'TypeScript', 'Node.js', 'MongoDB',
+  'Tailwind CSS', 'Figma', 'Vercel', 'Git',
 ];
 
 const teamRoles = [

@@ -38,7 +38,7 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <Link
               href="/"
-              className="text-2xl font-bold tracking-wider bg-gradient-to-r from-[#6366F1] to-[#22D3EE] bg-clip-text text-transparent"
+              className="text-2xl font-bold tracking-wider bg-gradient-to-r from-[#ffffff] to-[#ffffff] bg-clip-text text-transparent"
               aria-label="Lunithic หน้าแรก"
             >
               LUNITHIC
@@ -59,7 +59,7 @@ export default function Navbar() {
             ))}
             <Link
               href="#contact"
-              className="bg-gradient-to-r from-[#6366F1] to-[#22D3EE] text-white px-6 py-2.5 rounded-full font-semibold transition-all duration-300 hover:shadow-[0_0_24px_rgba(99,102,241,0.5)] hover:scale-105"
+              className="bg-gradient-to-r from-[#4992F0] to-[#4992F0] text-white px-6 py-2.5 rounded-full font-semibold transition-all duration-300 hover:shadow-[0_0_24px_rgba(99,102,241,0.5)] hover:scale-105"
               aria-label="ติดต่อเรา"
             >
               ติดต่อเรา

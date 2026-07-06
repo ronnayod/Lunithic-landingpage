@@ -21,7 +21,7 @@ const services = [
     title: 'Web Development',
     description: 'พัฒนาเว็บแอปพลิเคชันด้วยเทคโนโลยี Next.js และ React ที่โหลดเร็ว ปลอดภัย และ SEO-friendly',
     tech: ['Next.js', 'React', 'TypeScript'],
-    features: ['Server-Side Rendering', 'API Integration', 'Performance Optimized', 'SEO Built-in'],
+    features: ['API Integration', 'Performance Optimized', 'SEO Built-in'],
     icon: (
       <svg className="w-12 h-12 stroke-[#6366F1] group-hover:stroke-[#22D3EE] transition-colors duration-300" fill="none" viewBox="0 0 48 48" strokeWidth={1.5}>
         <path d="M16 18l-8 6 8 6" strokeLinecap="round" strokeLinejoin="round" />

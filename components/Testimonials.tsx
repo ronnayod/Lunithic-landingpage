@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 const testimonials = [
   {
     name: 'คุณสมชาย วิทยาการ',
-    role: 'CEO, TechVision',
+    role: '',
     initials: 'สว',
     quote:
       'Lunithic ช่วยพัฒนาเว็บไซต์ E-Commerce ให้เรา ผลลัพธ์เกินคาด ยอดขายออนไลน์เพิ่มขึ้น 280% ภายใน 6 เดือนแรก ทีมงานมืออาชีพมากครับ',
@@ -13,7 +13,7 @@ const testimonials = [
   },
   {
     name: 'คุณนิภา รัตนกุล',
-    role: 'Marketing Director, BangkokRetail',
+    role: '',
     initials: 'นร',
     quote:
       'ระบบ CRM ที่ Lunithic พัฒนาให้ ช่วยให้ทีมขายทำงานได้เร็วขึ้น 3 เท่า ติดตามลูกค้าได้ครบถ้วน ไม่หลุดแม้แต่รายเดียว',
@@ -21,7 +21,7 @@ const testimonials = [
   },
   {
     name: 'คุณธนพล ศิริชัย',
-    role: 'Founder, SiamDigital',
+    role: '',
     initials: 'ธศ',
     quote:
       'Landing page ที่ทำให้สวยมาก โหลดเร็ว SEO ดี ลูกค้าใหม่ติดต่อเข้ามาเพิ่มขึ้นเรื่อยๆ ประทับใจบริการหลังขายมาก',

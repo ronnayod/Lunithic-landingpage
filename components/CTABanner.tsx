@@ -88,9 +88,9 @@ export default function CTABanner() {
           <Link
             href="#contact"
             className="inline-block bg-white text-[#6366F1] font-bold text-lg px-10 py-4 rounded-full shadow-lg shadow-black/20 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-white/20 active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
-            aria-label="จองคิวปรึกษาฟรีกับ Lunithic"
+            aria-label="เริ่มต้นโปรเจกต์กับ Lunithic"
           >
-            จองคิวปรึกษาฟรี
+            เริ่มต้นโปรเจกต์
           </Link>
         </div>
       </div>

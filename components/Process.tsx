@@ -25,12 +25,12 @@ const steps = [
     title: 'Develop',
     heading: 'พัฒนาระบบ',
     description:
-      'เขียนโค้ดด้วยเทคโนโลยีทันสมัย Next.js, React, Node.js พร้อมทดสอบทุกขั้นตอน',
+      'พัฒนาเว็บด้วยเทคโนโลยีทันสมัย Next.js, Nuxt.js, Node.js พร้อมทดสอบทุกขั้นตอน',
   },
   {
     number: 4,
     icon: '🧪',
-    title: 'Test',
+    title: 'Testing',
     heading: 'ทดสอบคุณภาพ',
     description:
       'ทดสอบทุกฟังก์ชัน ทุกอุปกรณ์ เพื่อให้มั่นใจว่าทำงานได้สมบูรณ์แบบ',
@@ -38,10 +38,10 @@ const steps = [
   {
     number: 5,
     icon: '🚀',
-    title: 'Launch',
-    heading: 'เปิดตัวเว็บไซต์',
+    title: 'Handover',
+    heading: 'ส่งมอบ',
     description:
-      'Deploy ขึ้น server จริง พร้อมตั้งค่า domain, SSL และ SEO เบื้องต้น',
+      'ส่งมอบเว็บไซต์ที่สมบูรณ์พร้อมใช้งาน สิทธิ์การดูแลระบบ และคู่มือการจัดการเว็บไซต์สำหรับลูกค้า',
   },
   {
     number: 6,

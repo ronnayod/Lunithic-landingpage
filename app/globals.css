@@ -20,6 +20,11 @@
 }
 
 /* ===== Base Styles ===== */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background: var(--midnight);
   color: var(--moonstone);

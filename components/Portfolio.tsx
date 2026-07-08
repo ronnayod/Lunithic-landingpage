@@ -9,6 +9,7 @@ const projects = [
     description: 'ระบบร้านค้าออนไลน์รองรับ 10,000+ สินค้า',
     result: 'เพิ่มยอดขายออนไลน์ 280%',
     emoji: '🛍️',
+    image: '/img/img_E-Commerce.png',
     link: 'https://6a4118e252fddc88a192423b--reliable-sable-25d034.netlify.app/',
   },
   {
@@ -17,22 +18,23 @@ const projects = [
     description: 'ระบบจัดการเว็บไซต์หลังบ้าน',
     result: 'ลดเวลาทำงาน 60%',
     emoji: '🖥️',
+    image: '/img/img_Management.png',
     link: 'https://lunithicmanagement.vercel.app/',
   },
-  {
-    title: 'CRM Dashboard',
-    category: 'CRM System',
-    description: 'ระบบบริหารลูกค้าสำหรับบริษัทขนาดกลาง',
-    result: 'เพิ่มประสิทธิภาพทีมขาย 3 เท่า',
-    emoji: '📈',
-  },
-  {
-    title: 'Booking System',
-    category: 'Custom Solution',
-    description: 'ระบบจองคิวออนไลน์',
-    result: 'ลดอัตราการยกเลิก 45%',
-    emoji: '📅',
-  },
+  // {
+  //   title: 'CRM Dashboard',
+  //   category: 'CRM System',
+  //   description: 'ระบบบริหารลูกค้าสำหรับบริษัทขนาดกลาง',
+  //   result: 'เพิ่มประสิทธิภาพทีมขาย 3 เท่า',
+  //   emoji: '📈',
+  // },
+  // {
+  //   title: 'Booking System',
+  //   category: 'Custom Solution',
+  //   description: 'ระบบจองคิวออนไลน์',
+  //   result: 'ลดอัตราการยกเลิก 45%',
+  //   emoji: '📅',
+  // },
 ];
 
 export default function Portfolio() {
@@ -79,10 +81,20 @@ export default function Portfolio() {
           {projects.map((project) => {
             const card = (
               <>
-                {/* Gradient icon area */}
-                <div className="bg-gradient-to-br from-[#6366F1] to-[#22D3EE] h-48 flex items-center justify-center text-7xl sm:text-8xl transition-transform duration-500 group-hover:scale-105 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-[#0B1026]/20" />
-                  <span className="relative z-10">{project.emoji}</span>
+                {/* Image or gradient icon area */}
+                <div className="relative h-56 overflow-hidden">
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="bg-gradient-to-br from-[#6366F1] to-[#22D3EE] h-full flex items-center justify-center text-7xl sm:text-8xl transition-transform duration-500 group-hover:scale-105 relative">
+                      <div className="absolute inset-0 bg-[#0B1026]/20" />
+                      <span className="relative z-10">{project.emoji}</span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Content */}

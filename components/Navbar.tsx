@@ -46,7 +46,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -67,7 +67,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile toggle */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               type="button"
               aria-label={isOpen ? 'ปิดเมนู' : 'เปิดเมนู'}
@@ -89,7 +89,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${
+        className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out ${
           isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
@@ -105,14 +105,16 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="#contact"
-            onClick={() => setIsOpen(false)}
-            className="block mx-4 mt-3 text-center bg-gradient-to-r from-[#6366F1] to-[#22D3EE] text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:shadow-[0_0_24px_rgba(99,102,241,0.5)]"
-            aria-label="ติดต่อเรา"
-          >
-            ติดต่อเรา
-          </Link>
+          <div className="flex justify-center mt-4 mb-2">
+            <Link
+              href="#contact"
+              onClick={() => setIsOpen(false)}
+              className="bg-gradient-to-r from-[#6366F1] to-[#22D3EE] text-white px-8 py-2 rounded-full font-semibold text-sm transition-all duration-300 hover:shadow-[0_0_24px_rgba(99,102,241,0.5)]"
+              aria-label="ติดต่อเรา"
+            >
+              ติดต่อเรา
+            </Link>
+          </div>
         </div>
       </div>
     </nav>

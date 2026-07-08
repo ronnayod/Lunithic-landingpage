@@ -115,7 +115,7 @@ export default function FAQ() {
     <section
       id="faq"
       aria-label="คำถามที่พบบ่อย"
-      className="relative bg-[#0B1026] py-20 md:py-28"
+      className="relative bg-[#0B1026] py-20 md:py-28 overflow-hidden"
       itemScope
       itemType="https://schema.org/FAQPage"
     >

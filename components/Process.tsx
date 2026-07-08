@@ -101,7 +101,7 @@ export default function Process() {
         {/* Timeline */}
         <div className="relative">
           {/* Vertical line (center on desktop, left on mobile) */}
-          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#6366F1]/40 via-[#22D3EE]/40 to-[#6366F1]/40 md:-translate-x-px" />
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#6366F1]/40 via-[#22D3EE]/40 to-[#6366F1]/40 md:-translate-x-px" />
 
           <div className="space-y-12 md:space-y-16">
             {steps.map((step, index) => {
@@ -121,13 +121,13 @@ export default function Process() {
                 >
                   {/* Mobile & Desktop Layout */}
                   <div
-                    className={`flex w-full items-start gap-6 md:gap-0 ${
+                    className={`flex w-full items-start gap-4 sm:gap-6 md:gap-0 ${
                       isEven ? 'md:flex-row-reverse' : 'md:flex-row'
                     }`}
                   >
                     {/* Content Card */}
                     <div
-                      className={`flex-1 md:w-[calc(50%-2rem)] ${
+                      className={`ml-16 sm:ml-20 flex-1 md:ml-0 md:w-[calc(50%-2rem)] ${
                         isEven ? 'md:pl-12' : 'md:pr-12'
                       }`}
                     >
@@ -154,9 +154,9 @@ export default function Process() {
                     </div>
 
                     {/* Center Circle (desktop) / Left Circle (mobile) */}
-                    <div className="absolute left-6 md:left-1/2 -translate-x-1/2 flex-shrink-0 z-10">
+                    <div className="absolute left-8 md:left-1/2 -translate-x-1/2 flex-shrink-0 z-10">
                       <div
-                        className={`w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-500 ${
+                        className={`w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-500 ${
                           isVisible
                             ? 'bg-gradient-to-br from-[#6366F1] to-[#22D3EE] text-white shadow-lg shadow-[#6366F1]/30'
                             : 'bg-[#1A1F3D] text-[#8B8DA3] border border-[#6366F1]/20'

@@ -21,9 +21,9 @@ export default function Hero() {
 
       {/* Floating orbs */}
       <div className="absolute top-20 left-[10%] w-72 h-72 rounded-full bg-gradient-to-br from-[#6366F1] to-[#8B5CF6] opacity-20 blur-3xl animate-float" />
-      <div className="absolute top-[40%] right-[5%] w-96 h-96 rounded-full bg-gradient-to-br from-[#22D3EE] to-[#6366F1] opacity-15 blur-3xl animate-float-slow" />
-      <div className="absolute bottom-20 left-[20%] w-80 h-80 rounded-full bg-gradient-to-br from-[#8B5CF6] to-[#22D3EE] opacity-10 blur-3xl animate-float delay-300" />
-      <div className="absolute top-[60%] left-[60%] w-64 h-64 rounded-full bg-gradient-to-br from-[#6366F1] to-[#22D3EE] opacity-15 blur-3xl animate-float-slow delay-500" />
+      <div className="absolute top-[40%] right-[5%] w-96 h-96 rounded-full bg-gradient-to-br from-[#22D3EE] to-[#6366F1] opacity-15 blur-3xl animate-float-slow hidden sm:block" />
+      <div className="absolute bottom-20 left-[20%] w-48 sm:w-80 h-48 sm:h-80 rounded-full bg-gradient-to-br from-[#8B5CF6] to-[#22D3EE] opacity-10 blur-3xl animate-float delay-300" />
+      <div className="absolute top-[60%] left-[60%] w-64 h-64 rounded-full bg-gradient-to-br from-[#6366F1] to-[#22D3EE] opacity-15 blur-3xl animate-float-slow delay-500 hidden md:block" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -32,7 +32,7 @@ export default function Hero() {
             mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-[#E8E6F0] mb-6 tracking-tight leading-tight">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#E8E6F0] mb-6 tracking-tight leading-tight">
             เว็บไซต์ที่สร้างยอดขาย
             <br />
             <span className="gradient-text">
@@ -40,7 +40,7 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-[#8B8DA3] mb-6 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg lg:text-xl text-[#8B8DA3] mb-6 max-w-3xl mx-auto leading-relaxed">
             Lunithic คือทีมผู้เชี่ยวชาญด้านพัฒนาเว็บไซต์และระบบดิจิทัล
             ที่ช่วยให้ธุรกิจกว่า 30+ แห่งเติบโตในยุคดิจิทัล
             ด้วยเทคโนโลยี Next.js, React และ Node.js

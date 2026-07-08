@@ -1,6 +1,20 @@
 'use client';
 
 import { useEffect, useRef, useState, useCallback } from 'react';
+import type { IconType } from 'react-icons';
+import {
+  SiNuxt,
+  SiVuedotjs,
+  SiNextdotjs,
+  SiReact,
+  SiTypescript,
+  SiNodedotjs,
+  SiMongodb,
+  SiTailwindcss,
+  SiFigma,
+  SiVercel,
+  SiGit,
+} from 'react-icons/si';
 
 const statsData = [
   { target: 50, suffix: '+', label: 'โปรเจกต์สำเร็จ' },
@@ -9,9 +23,18 @@ const statsData = [
   { target: 100, suffix: '%', label: 'ความมุ่งมั่น' },
 ];
 
-const techStack = [
-  'Nuxt.js', 'Vue', 'Next.js', 'React', 'TypeScript', 'Node.js', 'MongoDB',
-  'Tailwind CSS', 'Figma', 'Vercel', 'Git',
+const techStack: { name: string; icon: IconType; color: string }[] = [
+  { name: 'Nuxt.js', icon: SiNuxt, color: '#00DC82' },
+  { name: 'Vue', icon: SiVuedotjs, color: '#4FC08D' },
+  { name: 'Next.js', icon: SiNextdotjs, color: '#FFFFFF' },
+  { name: 'React', icon: SiReact, color: '#61DAFB' },
+  { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
+  { name: 'Node.js', icon: SiNodedotjs, color: '#339933' },
+  { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
+  { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4' },
+  { name: 'Figma', icon: SiFigma, color: '#F24E1E' },
+  { name: 'Vercel', icon: SiVercel, color: '#FFFFFF' },
+  { name: 'Git', icon: SiGit, color: '#F05032' },
 ];
 
 const teamRoles = [
@@ -97,11 +120,11 @@ export default function About() {
         </div>
 
         {/* Part 1: Stats with animated counters */}
-        <div id="stats-section" className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20 reveal">
+        <div id="stats-section" className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-20 reveal">
           {statsData.map((stat, index) => (
             <div
               key={index}
-              className="bg-[#1A1F3D]/60 backdrop-blur-xl border border-[#6366F1]/20 rounded-2xl p-6 text-center group hover:border-[#6366F1]/50 transition-all duration-300 hover:shadow-[0_8px_32px_rgba(99,102,241,0.15)]"
+              className="bg-[#1A1F3D]/60 backdrop-blur-xl border border-[#6366F1]/20 rounded-2xl p-4 sm:p-6 text-center group hover:border-[#6366F1]/50 transition-all duration-300 hover:shadow-[0_8px_32px_rgba(99,102,241,0.15)]"
             >
               <div className="text-4xl sm:text-5xl font-bold gradient-text mb-2">
                 <AnimatedCounter target={stat.target} suffix={stat.suffix} started={counterStarted} />
@@ -115,7 +138,7 @@ export default function About() {
 
         {/* Part 2: About text */}
         <div className="max-w-4xl mx-auto mb-20 reveal">
-          <div className="bg-[#1A1F3D]/60 backdrop-blur-xl border border-[#6366F1]/20 rounded-2xl p-8 sm:p-10">
+          <div className="bg-[#1A1F3D]/60 backdrop-blur-xl border border-[#6366F1]/20 rounded-2xl p-5 sm:p-8 lg:p-10">
             <p className="text-[#E8E6F0]/90 text-base sm:text-lg leading-relaxed">
               Lunithic คือบริษัทพัฒนาเว็บไซต์และระบบดิจิทัลที่ก่อตั้งขึ้นด้วยความมุ่งมั่นในการสร้างผลงานคุณภาพสูง
               เราเชื่อว่าเว็บไซต์ที่ดีไม่ใช่แค่สวย แต่ต้อง<span className="text-[#22D3EE] font-semibold">สร้างผลลัพธ์ทางธุรกิจได้จริง</span> ทีมของเราประกอบด้วยนักออกแบบ
@@ -129,15 +152,19 @@ export default function About() {
           <h3 className="text-2xl font-bold text-[#E8E6F0] text-center mb-8">
             เทคโนโลยีที่เราใช้
           </h3>
-          <div className="flex flex-wrap justify-center gap-3">
-            {techStack.map((tech) => (
-              <div
-                key={tech}
-                className="bg-[#1A1F3D]/60 backdrop-blur-xl border border-[#6366F1]/20 rounded-xl px-5 py-3 text-[#E8E6F0] text-sm font-medium hover:scale-105 hover:border-[#6366F1]/50 transition-all duration-300 cursor-default hover:shadow-[0_4px_16px_rgba(99,102,241,0.15)]"
-              >
-                {tech}
-              </div>
-            ))}
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
+            {techStack.map((tech) => {
+              const Icon = tech.icon;
+              return (
+                <div
+                  key={tech.name}
+                  className="bg-[#1A1F3D]/60 backdrop-blur-xl border border-[#6366F1]/20 rounded-xl px-3 py-2 sm:px-5 sm:py-3 flex items-center gap-3 text-[#E8E6F0] text-xs sm:text-sm font-medium hover:scale-105 hover:border-[#6366F1]/50 transition-all duration-300 cursor-default hover:shadow-[0_4px_16px_rgba(99,102,241,0.15)]"
+                >
+                  <Icon size={20} color={tech.color} />
+                  <span>{tech.name}</span>
+                </div>
+              );
+            })}
           </div>
         </div>
 

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -11,6 +11,11 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   title: "Lunithic — บริษัทพัฒนาเว็บไซต์และระบบดิจิทัลครบวงจร | Web Development Agency",
@@ -87,6 +92,7 @@ export default function RootLayout({
   return (
     <html lang="th" suppressHydrationWarning>
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="canonical" href="https://lunithic.com" />
         <meta name="theme-color" content="#0B1026" />
         <meta name="format-detection" content="telephone=no" />
@@ -95,7 +101,9 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="overflow-x-hidden w-full min-h-screen bg-[#0B1026]">
+          {children}
+        </div>
       </body>
     </html>
   );

@@ -45,7 +45,7 @@ export default function Contact() {
           {/* Contact info */}
           <div className="space-y-6">
             {/* Info card */}
-            <div className="bg-[#1A1F3D]/60 backdrop-blur-xl border border-[#6366F1]/20 rounded-2xl p-8">
+            <div className="bg-[#1A1F3D]/60 backdrop-blur-xl border border-[#6366F1]/20 rounded-2xl p-5 sm:p-8">
               <h3 className="text-xl font-bold text-[#E8E6F0] mb-6">
                 ข้อมูลติดต่อ
               </h3>
@@ -60,7 +60,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="font-semibold text-[#E8E6F0] text-sm">Email</div>
-                    <div className="text-[#8B8DA3]">lunithic@gmail.com</div>
+                    <div className="text-[#8B8DA3] text-sm sm:text-base">lunithic@gmail.com</div>
                   </div>
                 </div>
 
@@ -73,7 +73,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="font-semibold text-[#E8E6F0] text-sm">โทรศัพท์</div>
-                    <div className="text-[#8B8DA3]">09-8285-6421, 09-2658-4645</div>
+                    <div className="text-[#8B8DA3] text-sm sm:text-base">09-8285-6421, 09-2658-4645</div>
                   </div>
                 </div>
 
@@ -87,7 +87,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="font-semibold text-[#E8E6F0] text-sm">ที่อยู่</div>
-                    <div className="text-[#8B8DA3]">ปราจีนบุรี ประเทศไทย</div>
+                    <div className="text-[#8B8DA3] text-sm sm:text-base">ปราจีนบุรี ประเทศไทย</div>
                   </div>
                 </div>
 
@@ -100,8 +100,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="font-semibold text-[#E8E6F0] text-sm">เวลาทำการ</div>
-                    <div className="text-[#8B8DA3]">จันทร์-ศุกร์ 12:00-20:00</div>
-                    <div className="text-[#8B8DA3]">เสาร์-อาทิตย์ 14:00-22:00</div>
+                    <div className="text-[#8B8DA3] text-sm sm:text-base">จันทร์-ศุกร์ 12:00-20:00</div>
+                    <div className="text-[#8B8DA3] text-sm sm:text-base">เสาร์-อาทิตย์ 14:00-22:00</div>
                   </div>
                 </div>
               </div>
@@ -110,7 +110,7 @@ export default function Contact() {
           {/* Contact form */}
           <div className="space-y-6">
             {/* Social links */}
-            <div className="bg-[#1A1F3D]/60 backdrop-blur-xl border border-[#6366F1]/20 rounded-2xl p-8">
+            <div className="bg-[#1A1F3D]/60 backdrop-blur-xl border border-[#6366F1]/20 rounded-2xl p-5 sm:p-8">
               <h3 className="text-lg font-bold text-[#E8E6F0] mb-4">
                 ติดตามเราได้ที่
               </h3>

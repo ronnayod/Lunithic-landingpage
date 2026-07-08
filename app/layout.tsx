@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "เว็บไซต์กรุงเทพ",
     "ออกแบบเว็บไซต์",
   ],
-  authors: [{ name: "Lunithic", url: "https://lunithic.com" }],
+  authors: [{ name: "Lunithic", url: "https://lunithic-landingpage.vercel.app/" }],
   creator: "Lunithic",
   publisher: "Lunithic",
   robots: {

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 
 const testimonials = [
   {
-    name: 'คุณสมชาย วิทยาการ',
+    name: 'สมชาย วิทยาการ',
     role: '',
     initials: 'สว',
     quote:
@@ -12,7 +12,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    name: 'คุณนิภา รัตนกุล',
+    name: 'นิภา รัตนกุล',
     role: '',
     initials: 'นร',
     quote:
@@ -20,7 +20,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    name: 'คุณธนพล ศิริชัย',
+    name: 'ธนพล ศิริชัย',
     role: '',
     initials: 'ธศ',
     quote:
